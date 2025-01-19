@@ -1,7 +1,7 @@
-var contactAddress = "con"+"tac"+"t&#64;c"+"hri"+"sbir"+"on&#46;c"+"om";
+var contactAddress = "mhmmdabil828&#64;gmail&#46;com";
 
-$(document).ready(function(){
-    $("#topNav a.section-toggle").click(function(event){
+$(document).ready(function() {
+    $("#topNav a.section-toggle").click(function(event) {
         event.preventDefault();
         if ($(this).hasClass("active")) return false;
         $("#topNav a").removeClass("active");

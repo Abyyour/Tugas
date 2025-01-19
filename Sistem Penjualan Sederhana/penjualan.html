@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Penjualan Sederhana</title>
+    <link rel="stylesheet" href="e.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistem Penjualan Sederhana</h1>
+        
+        <div class="product">
+            <form method="POST" action="logic.php">
+                <label for="product-name">Nama Produk:</label>
+                <input type="text" name="product-name" id="product-name" placeholder="Masukkan nama produk" required>
+
+                <label for="product-price">Harga Produk (IDR):</label>
+                <input type="number" name="product-price" id="product-price" placeholder="Masukkan harga produk" required>
+
+                <label for="product-quantity">Jumlah Produk:</label>
+                <input type="number" name="product-quantity" id="product-quantity" placeholder="Masukkan jumlah produk" required>
+
+                <button type="submit">Tambah Produk</button>
+            </form>
+        </div>
+
+        <h2>Daftar Pembelian</h2>
+        <table id="product-list">
+            <thead>
+                <tr>
+                    <th>Nama Produk</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                // Mulai sesi untuk membaca data (harus ada di file ini agar data muncul)
+                session_start();
+                foreach ($_SESSION['products'] as $product): 
+                ?>
+                <tr>
+                    <td><?= htmlspecialchars($product['name']) ?></td>
+                    <td><?= number_format($product['price']) ?></td>
+                    <td><?= $product['quantity'] ?></td>
+                    <td><?= number_format($product['total']) ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <div class="total">
+            <p>Total Belanja: <span id="total-amount"><?= number_format(array_sum(array_column($_SESSION['products'], 'total'))) ?></span> IDR</p>
+        </div>
+    </div>
+</body>
+</html>

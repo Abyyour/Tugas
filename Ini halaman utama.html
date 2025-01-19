@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="utama.js"></script>
+    <link rel="stylesheet" type="text/css" href="utama.css">
+</head>
+<body>
+<header>
+   <h1>Muhammad Abil</h1>
+</header>
+<div id="topNav">
+    <nav>
+        <a id="aboutLink" class="section-toggle active" href="/index.php?section=about" data-section-id="#about">About</a>
+        <a id="portfolioLink" class="section-toggle" href="/index.php?section=portfolio" data-section-id="#portfolio">Homework</a>
+        <script>document.write('<a id="contactLink" href="ma'+'il'+'to:'+contactAddress+'">Contact</a>');</script>
+        <noscript><a id="contactLink" href="#">Contact</a></noscript>
+    </nav>
+</div>
+<div id="content">
+    <div id="about" class="section" style="display: block;">
+        <h2>Hi, I'm Abil</h2>
+        <p>Saya Adalah Mahasiswa Universitas Nahdatul Ulama Kalimantan Timur Jurusan Teknik Informatika Tahun 2024.</p>
+        <p>Ketika Waktu luang, Saya suka mendengarkan musik dan bermain vidio game bersama teman saya.</p>
+    </div>
+    <div id="portfolio" class="section" style="display: none;">
+        <h2>See my work</h2>
+        <ul>
+            <li>
+                <a href="Sistem Penjualan Sederhana/e.php" target="_blank">
+                    <strong>Penjualan Sederhana</strong>
+                    <span>Homework</span>
+                </a>
+            </li>
+            <li>
+                <a href="Kalkulator Sederhana/tes.php" target="_blank">
+                    <strong>Kalkulator Sederhana</strong>
+                    <span>Homework</span>
+                </a>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<footer>
+    &copy; 2026 Muhammad Abil
+</footer>
+</body>
+</html>

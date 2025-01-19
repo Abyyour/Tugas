@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    font-family: "Roboto", sans-serif;
+    font-size: 12pt;
+    color: #303030;
+}
+p {
+    margin: 20px 0;
+    line-height: 1.8em;
+}
+a {
+    text-decoration: none;
+}
+header {
+    margin: 50px 0;
+}
+header h1 {
+    margin: 0;
+    font-family: "Courgette", sans-serif;
+    font-weight: 400;
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+}
+#topNav {
+    margin: 50px 0;
+}
+#topNav nav {
+    margin: 0 auto;
+    width: 340px;
+    overflow: auto;
+}
+#topNav nav a {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    border-bottom: solid 5px #a0a0a0;
+    height: 35px;
+    padding: 0 20px;
+    font-weight: bold;
+    line-height: 35px;
+    color: #a0a0a0;
+    transition: border-bottom-color 0.5s, color 0.5s;
+}
+#topNav nav a#aboutLink:hover,
+#topNav nav a#aboutLink.active {
+    border-bottom-color: #38B055;
+    color: #38B055;
+}
+#topNav nav a#portfolioLink:hover,
+#topNav nav a#portfolioLink.active {
+    border-bottom-color: #38B080;
+    color: #38B080;
+}
+#topNav nav a#contactLink:hover,
+#topNav nav a#contactLink.active {
+    border-bottom-color: #38B0AC;
+    color: #38B0AC;
+}
+#topNav nav a:hover {
+    transition: border-bottom-color 0.5s, color 0.5s;
+}
+#content {
+    margin: 50px auto;
+    width: 600px;
+}
+#content h2 {
+    margin: 20px 0;
+    font-weight: normal;
+    font-size: 2.6em;
+    color: #303030;
+}
+#about h2 {
+    color: #38B055;
+}
+#portfolio h2 {
+    color: #38B080;
+}
+#portfolio ul {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    list-style: none;
+}
+#portfolio li {
+    float: left;
+    width: 200px;
+}
+#portfolio a {
+    display: block;
+    margin: 3px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: #303030;
+}
+#portfolio a:hover {
+    background: #38B080;
+    color: #fff;
+    transition: background 0.5s;
+}
+#portfolio a span {
+    display: block;
+    font-size: 0.9em;
+}
+footer {
+    margin: 50px 0 20px 0;
+    font-size: 0.8em;
+    text-align: center;
+    color: #909090;
+}
+
+@media only screen and (max-width: 600px) {
+    #content {
+        margin: 20px;
+        width: auto;
+    }
+    #portfolio li {
+        float: none;
+        margin: 15px 3px;
+        width: auto;
+        font-size: 1.4em;
+    }
+}
